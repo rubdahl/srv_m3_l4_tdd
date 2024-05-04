@@ -1,5 +1,5 @@
 
-![](http://143.42.108.232/pvt/Noroff-64.png)
+![](http://images.restapi.co.za/pvt/Noroff-64.png)
 # Noroff
 ## Back-end Development Year 1
 ### SRV - Module 3 - TDD lesson
