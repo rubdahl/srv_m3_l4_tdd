@@ -7,3 +7,6 @@ const bookmarkService = new BookmarkService(db);
 
 /* GET home page. */
 router.get('/', isAuth, async (req, res, next) => {});
+
+
+module.exports = router;
