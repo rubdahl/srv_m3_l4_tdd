@@ -8,9 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bookmarksRouter = require('./routes/bookmarks');
 
-var db = require('./models');
-db.sequelize.sync({ force: false });
-
 var app = express();
 
 // view engine setup
