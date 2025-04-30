@@ -14,6 +14,12 @@ class BookmarkService {
 		});
 	}
 
+	async getBookmark(id) {
+		return await this.Bookmarks.findOne({
+			where: { id: id },
+		});
+	}
+
 	async getUsersBookmarks(userId) {
 		return await this.Bookmarks.findAll({
 			where: { UserId: userId },

@@ -6,7 +6,14 @@ const BookmarkService = require('../services/BookmarkService');
 const bookmarkService = new BookmarkService(db);
 
 /* GET home page. */
-router.get('/', isAuth, async (req, res, next) => {});
+router.get('/:id', isAuth, async (req, res, next) => {
+    const bookmark = await bookmarkService.getBookmark(req.params.id);
+    if (!bookmark) {
+        res.status(404).send({message: 'Could not find any bookmarks with that id'})
+    } else {
+        res.status(200).send({message: 'Success', bookmark})
+    }
+});
 
 router.post('/', isAuth, async (req, res, next) => {
     try {
