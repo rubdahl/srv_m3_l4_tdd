@@ -18,7 +18,7 @@ class UserService {
 
 	async getOne(username) {
 		return await this.Users.findOne({
-			where: { username: username },
+			where: { Username: username },
 		});
 	}
 }
